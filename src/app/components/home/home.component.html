@@ -1,0 +1,29 @@
+<div id="home">
+    
+    <div class="form">
+        <div class="img">
+            <img src="https://racunalniske-novice.com/wp-content/uploads/2021/03/Epilog-logo-colour-positive-RGB-3.png" alt="">
+        </div>
+
+        <span class="input p-float-label">
+            <input id="float-input" type="text" [(ngModel)]="inputCode" pInputText>
+            <label for="float-input">Vnesi...</label>
+        </span>
+        <button 
+            pButton 
+            pRipple 
+            type="button"
+            label="Skeniraj za kodo" class="p-button-success"
+            icon="pi pi-qrcode" 
+            iconPos="right"
+            (click)="onScannerClicked()">
+        </button>
+        <button 
+            pButton
+            pRipple
+            type="button"
+            label="Poišči napravo"
+            (click)="onSearchClicked()">
+        </button>
+    </div>
+</div>

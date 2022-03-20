@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+
+@keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem{
+    width: 100%;
+}
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,18 @@
+<div *ngIf="cameraEnabled" class="ocrloader">
+    <em></em>
+  <!--   <div>
+   
+    </div> -->
+    <div  *ngIf="isDetected"class="diode">
+      <div class="laser"></div>
+    </div>
+    <!-- <span class="laser"></span> -->
+  </div>
+  
+  <zxing-scanner class="scanner" 
+    [formats]="allowedFormats" 
+    [enable]="scannerEnabled" 
+    (camerasNotFound)="camerasNotFoundHandler($event)" 
+    (scanSuccess)="scanSuccessHandler($event)"
+    (camerasFound)="camerasFoundHandler($event)"
+  >

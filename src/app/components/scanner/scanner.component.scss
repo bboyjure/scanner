@@ -1,0 +1,104 @@
+:host zxing-scanner::ng-deep .scanner {
+    max-height: 100vh;
+    width: 100vw;
+    border: 1px solid red;
+    object-fit: contain;
+  }
+  
+  // .camera-mode {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   // border: 1px solid red;
+  //   position: absolute;
+  //   z-index: 3;
+  //   top: 12px;
+  //   font-size: 20px;
+  //   right: 12px;
+  //   width: 24px;
+  //   height: 24px;
+  //   i {
+  //     color: white;
+  //   }
+  // }
+  
+  .ocrloader {
+    width: 200px;
+    height: 100px;
+    padding: 12px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -70%); 
+    backface-visibility: hidden;
+    &:before,
+    &:after,
+    em:after,
+    em:before {
+      border-color: #000;
+      content: "";
+      position: absolute;
+      width: 19px;
+      height: 16px;
+      border-style: solid;
+      border-width: 0px;
+    }
+    &:before {
+      left: 0;
+      top: 0;
+      border-left-width: 1px;
+      border-top-width: 1px;
+    }
+    &:after {
+      right: 0;
+      top: 0;
+      border-right-width: 1px;
+      border-top-width: 1px;
+    }
+    em:before {
+      left: 0;
+      bottom: 0;
+      border-left-width: 1px;
+      border-bottom-width: 1px;
+    }
+    em:after {
+      right: 0;
+      bottom: 0;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+    }
+  }
+  
+  .laser {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    // margin-left: -25%;
+    background-color: tomato;
+    height: 1px;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 0 0 4px red;
+    animation: beam 0.01s infinite;
+    animation: scanning 2s infinite;
+  }
+  .diode {
+    animation: beam 0.01s infinite;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @keyframes beam {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes scanning {
+    50% {
+      transform: translateY(75px);
+    }
+  }
+  
